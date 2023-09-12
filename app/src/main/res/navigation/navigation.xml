@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentMain">
+
+    <fragment
+        android:id="@+id/fragmentMain"
+        android:name="com.routines.game.ui.cover.FragmentCover"
+        android:label="FragmentMain" >
+        <action
+            android:id="@+id/action_fragmentMain_to_fragmentTasks"
+            app:destination="@id/fragmentTasks" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTasks"
+        android:name="com.routines.game.ui.tasks.FragmentTasks"
+        android:label="FragmentTasks" >
+        <action
+            android:id="@+id/action_fragmentTasks_to_fragmentNewTask"
+            app:destination="@id/fragmentNewTask" />
+        <action
+            android:id="@+id/action_fragmentTasks_to_fragmentNewComment"
+            app:destination="@id/fragmentNewComment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentNewTask"
+        android:name="com.routines.game.ui.new_task.FragmentNewTask"
+        android:label="FragmentNewTask" />
+    <fragment
+        android:id="@+id/fragmentNewComment"
+        android:name="com.routines.game.ui.new_comment.FragmentNewComment"
+        android:label="FragmentNewComment" />
+</navigation>

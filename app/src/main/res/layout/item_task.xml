@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="11dp"
+        android:layout_height="11dp"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="#767676"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/taskTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/f400"
+        tools:text="1 PM"
+        android:layout_marginTop="-3dp"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/cardView3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/taskTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/f400"
+        tools:text="Board meeting"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/cardView3"
+        app:layout_constraintTop_toBottomOf="@+id/taskTime" />
+
+    <TextView
+        android:layout_marginTop="4dp"
+        android:id="@+id/taskDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/f400"
+        android:paddingBottom="30dp"
+        tools:text="Lorem ipsum dolor sit amet, ut ius quaestio perpetua, cu graece scripta vituperatoribus qui."
+        android:textColor="@color/black"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/cardView3"
+        app:layout_constraintTop_toBottomOf="@+id/taskTitle" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#767676"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cardView3"
+        app:layout_constraintStart_toStartOf="@+id/cardView3"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
+    <ImageView
+        android:id="@+id/menu"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/done"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:layout_marginEnd="5dp"
+        android:layout_width="58dp"
+        android:layout_height="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/menu"
+        app:layout_constraintTop_toTopOf="parent">
+        
+        <ImageView
+            android:src="@drawable/ic_check"
+            android:layout_marginStart="3dp"
+            android:layout_width="7dp"
+            android:layout_height="7dp"/>
+
+        <TextView
+            android:textColor="#767676"
+            android:layout_marginTop="0.5dp"
+            android:layout_marginStart="3dp"
+            android:text="Done"
+            android:textSize="6dp"
+            android:fontFamily="@font/f400"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="3dp"
+        android:id="@+id/delete"
+        android:layout_width="58dp"
+        android:layout_height="10dp"
+        android:layout_marginEnd="5dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toStartOf="@+id/menu"
+        app:layout_constraintTop_toBottomOf="@+id/done">
+
+        <ImageView
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginStart="3dp"
+            android:src="@drawable/ic_cross" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="0.5dp"
+            android:fontFamily="@font/f400"
+            android:text="Delete"
+            android:textColor="#767676"
+            android:textSize="6dp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/taskDone"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#FF0000"
+        app:layout_constraintBottom_toBottomOf="@+id/taskTitle"
+        app:layout_constraintEnd_toEndOf="@+id/taskTitle"
+        app:layout_constraintStart_toStartOf="@+id/taskTitle"
+        app:layout_constraintTop_toTopOf="@+id/taskTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
